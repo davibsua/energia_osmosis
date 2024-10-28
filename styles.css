@@ -1,0 +1,19 @@
+.titulo {
+    color: blue; 
+    font-size: 33px; 
+    text-align: center;
+}
+body{
+background-color: lightblue;
+}
+.subtitle{
+    color: darkblue;
+    text-aling: left;
+    font-size: 24
+    
+}
+.element{
+    color:black;
+    font-size: 12;
+    
+}
