@@ -4,6 +4,7 @@
     text-align: center;
     margin: 15px; 
     padding-top: 15px; 
+    font-family: sans-serif;
 }
 body{
     background-color: lightblue;
@@ -38,12 +39,35 @@ body{
     width: 450px;
     padding: 15px;
     margin-left:70px;
-    margin-top: 90px;
+    margin-top: 150px;
     font-size: 28px;
     border-radius: 25px;
 }
 .images{
-    padding-right: 70px;
-    padding-top: 90px;
+    margin-left: 770px; 
+    margin-top: -400px;
     border-radius: 25px;
+    width: 650px; 
+    height: 430px; 
+}
+.next {
+    position: absolute;
+    bottom: 0;  /* Posición al fondo */
+    right: 0;    /* Posición a la izquierda */
+    margin: 10px;  
+    padding-bottom: 5px;
+    padding-left: 5px;
+    font-size: 22px; 
+    color: red;
+  }
+.anterior {
+    position: absolute;
+    bottom: 0;  /* Posición al fondo */
+    right: 0;    /* Posición a la izquierda */
+    margin: 10px;  
+    padding-bottom: 5px;
+    padding-left: 5px;
+    font-size: 22px; 
+    color: red;
+    margin-right: 115px;
 }
