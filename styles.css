@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 .titulo {
     color: blue; 
     font-size: 50px; 
@@ -5,44 +7,82 @@
     margin: 15px; 
     padding-top: 15px; 
     font-family: sans-serif;
+    animation: fadeIn 1s ease-out;
+    border: 15px outset rgb(94, 156, 232);  /* Grosor de 4px, estilo double, color negro */
+    border-radius: 10px;       /* Bordes redondeados opcionales */
+    padding: 10px;
+    display: inline-block
 }
 body{
     background-color: lightblue;
-
+    
 }
 .subtitle{
     color: darkblue;
     text-align: left;
     font-size: 30px;
     padding-left: 50px; 
-    
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: 700;
     
 }
 .element{
     color:black;
     font-size: 23px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: 500;
     
 }
+.element:hover {
+    color: #007BFF;
+    transform: scale(1.1);
+}
 .exit {
-    position: absolute;
-    bottom: 0;  /* Posición al fondo */
-    left: 0;    /* Posición a la izquierda */
-    margin: 10px;  
-    padding-bottom: 5px;
-    padding-left: 5px;
-    font-size: 22px; 
-    color: red;
-  }
+    position: fixed; /* Fijo en la pantalla */
+    bottom: 10px;    /* Espacio desde el fondo */
+    left: 15px;     /* Espacio desde la derecha */
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #fff;
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.exit:active {
+    transform: translateY(3px);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
 .container {
     background-color: grey;
     text-align: center;
     width: 450px;
     padding: 15px;
-    margin-left:70px;
+    margin-left:100px;
     margin-top: 150px;
+    margin-bottom: 20px;
     font-size: 28px;
     border-radius: 25px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+    border:solid 10px rgba(60, 60, 60, 0.334)
 }
+.nombre {
+    position: fixed; 
+    bottom: 50px; 
+    left: 750px; 
+    background-color: grey;
+    text-align: center; 
+    border-radius: 20px; 
+    padding: 15px; 
+    font-size: 25px; 
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: 400;
+}
+
 .images{
     margin-left: 770px; 
     margin-top: -400px;
@@ -50,24 +90,88 @@ body{
     width: 650px; 
     height: 430px; 
 }
+.indeximage{
+    position: fixed; 
+    bottom: 230px; 
+    right: 600px; 
+    width: 800px; 
+    height: 550px; 
+}
+/* Botón de navegación fijo en la esquina inferior derecha */
 .next {
-    position: absolute;
-    bottom: 0;  /* Posición al fondo */
-    right: 0;    /* Posición a la izquierda */
-    margin: 10px;  
-    padding-bottom: 5px;
-    padding-left: 5px;
-    font-size: 22px; 
-    color: red;
-  }
+    position: fixed; /* Fijo en la pantalla */
+    bottom: 20px;    /* Espacio desde el fondo */
+    right: 20px;     /* Espacio desde la derecha */
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.next:active {
+    transform: translateY(3px);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
 .anterior {
-    position: absolute;
-    bottom: 0;  /* Posición al fondo */
-    right: 0;    /* Posición a la izquierda */
-    margin: 10px;  
-    padding-bottom: 5px;
-    padding-left: 5px;
-    font-size: 22px; 
-    color: red;
-    margin-right: 115px;
+    position: fixed;
+    bottom: 20px;  /* Posición al fondo */
+    right: 140px;    /* Posición a la izquierda */
+    padding: 10px 20px; 
+    font-size: 18px; 
+    color: white; 
+    background-color: red;
+    border-radius: 5px; 
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.2); 
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+.anterior:active {
+    transform: translateY(3px); 
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.text ul {
+    list-style-type: none;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: 700;
+}
+.text ul li {
+    background: #e0f7fa;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: 400;
+}
+.fade-in {
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.text{
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: 400;
 }
